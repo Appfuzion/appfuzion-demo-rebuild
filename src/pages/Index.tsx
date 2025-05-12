@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import FeaturedVideo from '@/components/FeaturedVideo';
 import VideoGrid from '@/components/VideoGrid';
 import VideoPlayer from '@/components/VideoPlayer';
-import { generateRandomVideos, featuredVideo, VideoData } from '@/lib/constants';
+import { generateRandomVideos, featuredVideo, VideoData, thumbnailImages } from '@/lib/constants';
 
 const Index = () => {
   const [spotlightVideos, setSpotlightVideos] = useState<VideoData[]>([]);
@@ -37,8 +37,22 @@ const Index = () => {
   
   // Generate videos on component mount
   useEffect(() => {
-    setSpotlightVideos(generateRandomVideos(4));
-    setAllVideos(generateRandomVideos(12));
+    const spotlight = generateRandomVideos(4);
+    const all = generateRandomVideos(12);
+    
+    // Find any video with "Face Of The Code" title and replace its thumbnail
+    const updatedAll = all.map(video => {
+      if (video.title === "Face Of The Code") {
+        return {
+          ...video,
+          thumbnail: "/lovable-uploads/3441f372-e236-4e86-82be-9c237216b8ef.png" // Use new image
+        };
+      }
+      return video;
+    });
+    
+    setSpotlightVideos(spotlight);
+    setAllVideos(updatedAll);
   }, []);
   
   const handlePlayFeatured = () => {

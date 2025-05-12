@@ -20,7 +20,8 @@ export const thumbnailImages = [
   "/lovable-uploads/55cea940-1431-4114-a5ad-851d47e1ffcd.png",
   "/lovable-uploads/485169be-4402-4494-92d4-56b439e9982b.png",
   "/lovable-uploads/fcd260a0-2949-4c1f-96a6-86a6881ef8b2.png",
-  "/lovable-uploads/f0ec2dc3-a4fe-4f0b-b4a9-930e77572d64.png"
+  "/lovable-uploads/f0ec2dc3-a4fe-4f0b-b4a9-930e77572d64.png",
+  "/lovable-uploads/3441f372-e236-4e86-82be-9c237216b8ef.png" // New image added
 ];
 
 export const generateRandomVideos = (count: number): VideoData[] => {
@@ -75,11 +76,12 @@ export const generateRandomVideos = (count: number): VideoData[] => {
   return videos;
 };
 
+// Update the featured video to use the new image
 export const featuredVideo: VideoData = {
   id: "featured",
   title: "Appfuzion Demo - Episode 1",
   link: "https://www.youtube.com/watch?v=3rAXwxyqzl0",
-  thumbnail: thumbnailImages[0],
+  thumbnail: "/lovable-uploads/3441f372-e236-4e86-82be-9c237216b8ef.png", // Use new image
   views: "1.5M",
   duration: "15:47",
   channel: "Appfuzion Demo"
