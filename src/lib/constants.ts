@@ -1,4 +1,3 @@
-
 export interface VideoData {
   id: string;
   title: string;
@@ -124,7 +123,7 @@ export const spotlightVideos: VideoData[] = [
     id: "spotlight-4",
     title: "Appfuzion Demo - Episode 3",
     link: "https://www.youtube.com/@Appfuzionteam",
-    thumbnail: "/lovable-uploads/3441f372-e236-4e86-82be-9c237216b8ef.png",
+    thumbnail: "/lovable-uploads/9eea2333-5135-4b22-bdec-c576092dfefc.png", 
     views: "659K",
     duration: "13:21",
     channel: "Appfuzion Demo"
