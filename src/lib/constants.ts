@@ -21,7 +21,11 @@ export const thumbnailImages = [
   "/lovable-uploads/485169be-4402-4494-92d4-56b439e9982b.png",
   "/lovable-uploads/fcd260a0-2949-4c1f-96a6-86a6881ef8b2.png",
   "/lovable-uploads/f0ec2dc3-a4fe-4f0b-b4a9-930e77572d64.png",
-  "/lovable-uploads/3441f372-e236-4e86-82be-9c237216b8ef.png" // New image added
+  "/lovable-uploads/3441f372-e236-4e86-82be-9c237216b8ef.png",
+  // Add new uploaded images
+  "/lovable-uploads/9eea2333-5135-4b22-bdec-c576092dfefc.png",
+  "/lovable-uploads/6f0595e8-4164-4ae6-8c0f-5c8f9a14847f.png",
+  "/lovable-uploads/d59521fc-b9dd-4d9a-847a-17e701eef564.png"
 ];
 
 export const generateRandomVideos = (count: number): VideoData[] => {
@@ -81,8 +85,48 @@ export const featuredVideo: VideoData = {
   id: "featured",
   title: "Appfuzion Demo - Episode 1",
   link: "https://www.youtube.com/watch?v=3rAXwxyqzl0",
-  thumbnail: "/lovable-uploads/3441f372-e236-4e86-82be-9c237216b8ef.png", // Use new image
+  thumbnail: "/lovable-uploads/3441f372-e236-4e86-82be-9c237216b8ef.png", 
   views: "1.5M",
   duration: "15:47",
   channel: "Appfuzion Demo"
 };
+
+// Create specific spotlight videos with the new images
+export const spotlightVideos: VideoData[] = [
+  {
+    id: "spotlight-1",
+    title: "Appfuzion Demo - Episode 1",
+    link: "https://www.youtube.com/watch?v=3rAXwxyqzl0",
+    thumbnail: "/lovable-uploads/9eea2333-5135-4b22-bdec-c576092dfefc.png",
+    views: "1.5M",
+    duration: "12:34",
+    channel: "Appfuzion Demo"
+  },
+  {
+    id: "spotlight-2",
+    title: "Appfuzion Demo - Episode 2",
+    link: "https://www.youtube.com/watch?v=N-f-mnlPKMY",
+    thumbnail: "/lovable-uploads/6f0595e8-4164-4ae6-8c0f-5c8f9a14847f.png",
+    views: "847K",
+    duration: "14:22",
+    channel: "Appfuzion Demo"
+  },
+  {
+    id: "spotlight-3",
+    title: "Appfuzion Demo - Episode 1",
+    link: "https://www.youtube.com/watch?v=6WShi_o6D_k",
+    thumbnail: "/lovable-uploads/d59521fc-b9dd-4d9a-847a-17e701eef564.png",
+    views: "928K",
+    duration: "11:47",
+    channel: "Appfuzion Demo"
+  },
+  {
+    id: "spotlight-4",
+    title: "Appfuzion Demo - Episode 3",
+    link: "https://www.youtube.com/@Appfuzionteam",
+    thumbnail: "/lovable-uploads/3441f372-e236-4e86-82be-9c237216b8ef.png",
+    views: "659K",
+    duration: "13:21",
+    channel: "Appfuzion Demo"
+  }
+];
